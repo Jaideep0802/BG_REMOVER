@@ -1,11 +1,12 @@
 import express from "express";
-import { clerkWebHooks, userCredits } from "../controllers/userController.js";
+import { clerkWebHooks, paymentRazorpay, userCredits, verifyRazorPay } from "../controllers/userController.js";
 import authUser from "../middlewares/auth.js";
 
 const userRouter = express.Router()
 
 userRouter.post('/webhooks', clerkWebHooks)
 userRouter.get('/credits', authUser,userCredits)
-
+userRouter.post('/pay-razor',authUser, paymentRazorpay)
+userRouter.post('/verify-razor',verifyRazorPay)
 
 export default userRouter
