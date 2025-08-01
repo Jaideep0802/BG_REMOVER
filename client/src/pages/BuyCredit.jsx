@@ -7,7 +7,6 @@ import { toast } from 'react-toastify'
 import axios from 'axios'
 
 const BuyCredit = () => {
-
   const { backendUrl, loadCreditsData } = useContext(AppContext)
 
   const navigate = useNavigate()
@@ -46,8 +45,6 @@ const BuyCredit = () => {
     const rzp = new window.Razorpay(options)
     rzp.open()
   }
-
-  
 
   const paymentRazorpay = async (planId) => {
     try {
