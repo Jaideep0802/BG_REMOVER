@@ -5,7 +5,6 @@ import Result from './pages/Result'
 import BuyCredit from './pages/BuyCredit'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import ConfettiWrapper from './components/ConfettiWrapper'
 import { ToastContainer, toast } from 'react-toastify';
 
 const App = () => {
